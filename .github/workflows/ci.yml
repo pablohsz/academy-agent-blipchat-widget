@@ -32,7 +32,7 @@ jobs:
         done
 
     - name: Execute script w Secret
-      run: echo "const const appKey = '${{ secrets.APP_KEY }}';" > script.js
+      run: echo "const appKey = '${{ secrets.APP_KEY }}';" > script.js
 
     - name: Servir o código HTML
       run: http-server . -p 8080 &
