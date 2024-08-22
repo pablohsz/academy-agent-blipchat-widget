@@ -32,7 +32,5 @@ jobs:
         done
 
     - name: Execute script w Secret
-      run: echo "const appKey = '${{ secrets.APP_KEY }}';" > script.js
-
-    - name: Servir o código HTML
-      run: http-server . -p 8080 &
+      run: |
+        echo "const appKey = '${{ secrets.APP_KEY }}';" | cat - script.js > temp.js && mv temp.js script.js
