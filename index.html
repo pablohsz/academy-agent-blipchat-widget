@@ -8,7 +8,18 @@
 <body>
     <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
     <div class="container" id="main-container"> 
-    <script src="script.js"></script>
+        <script>
+            (function () {
+                window.onload = function () {
+                    new BlipChat()
+                        .withAppKey('ZmFxYWNhZGVteXY0OjAwOWFmMjdmLTM3MTMtNDNiNS1iNmZmLWQ0YzQ3N2MxYjcxMw==')
+                        .withButton({"color":"#0096fa","icon":""})
+                        .withCustomCommonUrl('https://protos-take-nick.chat.blip.ai/')
+                        .withTarget('main-container')
+                        .build();
+                }
+            })();
+        </script>
     </div> 
 </body>
 </html>
