@@ -32,10 +32,7 @@ jobs:
         done
 
     - name: Execute script w Secret
-      env:
-        MY_SECRET: ${{secrets.APP_KEY}}
-      run: |
-       run: node script.js
+      run: echo "const const appKey = '${{ secrets.APP_KEY }}';" > script.js
 
     - name: Servir o código HTML
       run: http-server . -p 8080 &

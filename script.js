@@ -1,4 +1,3 @@
-const appKey = process.env.APP_KEY;
 
 (function () {
         window.onload = function () {
