@@ -31,6 +31,12 @@ jobs:
           node -c $file
         done
 
-    - name: Execute script w Secret
+    - name: Set env
+      env:
+        CI: true
+        API_KEY: ${{ secrets.APP_KEY }}
+      run: echo "API_KEY é $APP_KEY"
+
+    - name: Inject  App Key on script.js
       run: |
         echo "const appKey = '${{ secrets.APP_KEY }}';" | cat - script.js > temp.js && mv temp.js script.js
