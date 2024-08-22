@@ -1,14 +1,12 @@
 name: CI for Academy Agent
 
-on:
+on: 
   push:
     branches:
-      - main
-      - development
+      [main, development]
   pull_request:
     branches:
-      - main
-      - development
+      [main, development]
 
 jobs:
   build:
@@ -17,11 +15,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
 
     - name: Install http server
       run: npm install -g http-server
