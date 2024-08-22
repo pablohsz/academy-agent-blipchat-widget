@@ -37,6 +37,4 @@ jobs:
         API_KEY: ${{ secrets.APP_KEY }}
       run: echo "API_KEY é $APP_KEY"
 
-    - name: Inject  App Key on script.js
-      run: |
-        echo "const appKey = '${{ secrets.APP_KEY }}';" | cat - script.js > temp.js && mv temp.js script.js
+    
