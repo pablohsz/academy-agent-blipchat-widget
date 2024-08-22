@@ -3,10 +3,10 @@ name: CI for Academy Agent
 on: 
   push:
     branches:
-      [main, development]
+      [main, dev]
   pull_request:
     branches:
-      [main, development]
+      [main, dev]
 
 jobs:
   build:
