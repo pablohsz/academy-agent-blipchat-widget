@@ -21,6 +21,7 @@
             background-color: #f0f0f0;
         }
     </style>
+    <link rel="icon" type="image/x-icon" href="https://help.blip.ai/hc/theming_assets/01HZPM22JPHNV15ME4EQEYG7Z4">
     <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
 </head>
 <body id="body">
@@ -34,6 +35,7 @@
                         .withButton({"color":"#0096fa","icon":""})
                         .withCustomCommonUrl('https://protos-take-nick.chat.blip.ai/')
                         .withTarget('body')
+                        .withoutHistory()
                         .build();
                 }
             })();
