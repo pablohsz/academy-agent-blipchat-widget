@@ -21,10 +21,11 @@
             background-color: #f0f0f0;
         }
     </style>
-</head>
-<body>
     <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-    <div id="main-container"> 
+</head>
+<body id="body">
+    
+  
         <script>
             (function () {
                 window.onload = function () {
@@ -32,11 +33,11 @@
                         .withAppKey('ZmFxYWNhZGVteXY0OjAwOWFmMjdmLTM3MTMtNDNiNS1iNmZmLWQ0YzQ3N2MxYjcxMw==')
                         .withButton({"color":"#0096fa","icon":""})
                         .withCustomCommonUrl('https://protos-take-nick.chat.blip.ai/')
-                        .withTarget('main-container')
+                        .withTarget('body')
                         .build();
                 }
             })();
         </script>
-    </div> 
+   
 </body>
 </html>
